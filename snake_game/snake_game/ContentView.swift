@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        CircleNumberView(color: .red, number: 1)
         Text("Hello, world!")
             .padding()
     }
@@ -16,38 +17,23 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        GetStartedView()
+        ContentView()
     }
 }
 
-struct GetStartedView: View {
-    private enum SheetType: String, Identifiable {
-        var id: String {
-            return rawValue
-        }
-        case signIn, createAccount
-    }
-    @State private var type: SheetType? = nil
+
+struct CircleNumberView: View {
+    var color: Color
+    var number:Int
     
     var body: some View {
-        VStack {
-            Text("Get Started using Orbit")
-            Button("Sign In") {
-                self.type = .signIn
-            }
-            Button("Create Account") {
-                self.type = .createAccount
-            }
-        }.sheet(item: $type) { type in
-            NavigationView {
-                switch type {
-                case .signIn:
-                    ContentView()
-                case .createAccount:
-                    ContentView()
-                }
-            }
-            
+        ZStack {
+            Circle()
+                .frame(width: 200, height: 200)
+                .foregroundColor(color)
+            Text("\(number)")
+                .foregroundColor(.white)
+                .font(.system(size: 70, weight: .bold))
         }
     }
 }
