@@ -16,6 +16,38 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        GetStartedView()
+    }
+}
+
+struct GetStartedView: View {
+    private enum SheetType: String, Identifiable {
+        var id: String {
+            return rawValue
+        }
+        case signIn, createAccount
+    }
+    @State private var type: SheetType? = nil
+    
+    var body: some View {
+        VStack {
+            Text("Get Started using Orbit")
+            Button("Sign In") {
+                self.type = .signIn
+            }
+            Button("Create Account") {
+                self.type = .createAccount
+            }
+        }.sheet(item: $type) { type in
+            NavigationView {
+                switch type {
+                case .signIn:
+                    ContentView()
+                case .createAccount:
+                    ContentView()
+                }
+            }
+            
+        }
     }
 }
