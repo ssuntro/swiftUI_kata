@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1D2D6D25B5F18900728F87 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2D6C25B5F18900728F87 /* ImagePicker.swift */; };
 		BB8EC73725A897B8004BA40A /* snake_gameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EC73625A897B8004BA40A /* snake_gameApp.swift */; };
 		BB8EC73925A897B8004BA40A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8EC73825A897B8004BA40A /* ContentView.swift */; };
 		BB8EC73B25A897BB004BA40A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8EC73A25A897BB004BA40A /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB1D2D6C25B5F18900728F87 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		BB8EC73325A897B8004BA40A /* snake_game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snake_game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8EC73625A897B8004BA40A /* snake_gameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snake_gameApp.swift; sourceTree = "<group>"; };
 		BB8EC73825A897B8004BA40A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				BB8EC73625A897B8004BA40A /* snake_gameApp.swift */,
 				BB8EC73825A897B8004BA40A /* ContentView.swift */,
+				BB1D2D6C25B5F18900728F87 /* ImagePicker.swift */,
 				BB8EC73A25A897BB004BA40A /* Assets.xcassets */,
 				BB8EC73F25A897BB004BA40A /* Info.plist */,
 				BB8EC73C25A897BB004BA40A /* Preview Content */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB1D2D6D25B5F18900728F87 /* ImagePicker.swift in Sources */,
 				BB8EC73925A897B8004BA40A /* ContentView.swift in Sources */,
 				BB8EC73725A897B8004BA40A /* snake_gameApp.swift in Sources */,
 			);
